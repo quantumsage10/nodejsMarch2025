@@ -39,4 +39,10 @@ console.log(process.argv[3])
 
 ## Module System
 
-in nodejs means module means file
+user defined module - cjs & esm
+in nodejs module means file
+
+## Inbuilt Module provided by nodejs
+
+os module for computer cpu, memory, ram, threads
+
