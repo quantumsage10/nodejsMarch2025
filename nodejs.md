@@ -69,7 +69,7 @@ os module for computer cpu, memory, ram, threads
 
 ## fs
 
-### promises 
+### promises (easily readable)  - structured 
 
 - main thread is always free
 - second thread is working 
@@ -78,3 +78,32 @@ os module for computer cpu, memory, ram, threads
 - promise introduced rescue from callback hell
 
 promises syntax - etheir .then or async/await
+
+✅ usecase/tradeons of promise - time isn't an issue & perfomance isn't an issue & only result is required 
+
+💥 tradeoffs of promises
+- more resources usage than callbacks
+- more memory usage cuz behind the scene promise object creation 
+- processing overhead (processing, tracking, monitoring)
+
+### 🔮 Callbacks (Faster) - low latency 
+
+- Lower memory usage (no extra event loop overhead)
+- Faster execution (doesn't create additional microtasks)
+- Better for real-time, high-frequency operations
+
+✅ usecase/tradeons of callbacks - time is a issue(low latency) where every milliseconds is important 
+
+💥 tradeoffs of callbacks
+Callback Hell (difficult to maintain)
+Harder error handling
+
+# Exceptional Scenarios
+
+for ultra-high-performance and mission-critical systems like healthcare, space exploration, and defense, raw callbacks or even lower-level programming with C++/Rust via Node.js bindings are often used
+
+What Should Be Used?
+✅ C++/Rust – For direct hardware interaction & real-time performance.
+✅ Node.js (via C++/Rust bindings) – For fast API interfaces but not core logic.
+✅ Raw Callbacks – When you need the fastest execution possible.
+✅ WebAssembly (WASM) – When performance is critical in a browser or edge computing scenario.
