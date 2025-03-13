@@ -28,32 +28,44 @@ function monitor() {
 
 		const usedMemory = (os.totalmem() - os.freemem()) / (1024 * 1024 * 1024)
 
-		console.log(
-		    "Memory used:",
-			usedMemory > 7
-				? chalk.redBright(
-						`${usedMemory.toFixed(2)} GB / ${
-							os.totalmem() / (1024 * 1024 * 1024).toFixed(2)
-						} GB`
-				  )
-				: chalk.greenBright(
-						`${usedMemory.toFixed(2)} GB / ${
-							os.totalmem() / (1024 * 1024 * 1024).toFixed(2)
-						} GB`
-			)
-		)
+		// console.log(
+		//     "Memory used:",
+		// 	usedMemory > 7
+		// 		? chalk.redBright(
+		// 				`${usedMemory.toFixed(2)} GB / ${
+		// 					os.totalmem() / (1024 * 1024 * 1024).toFixed(2)
+		// 				} GB`
+		// 		  )
+		// 		: chalk.greenBright(
+		// 				`${usedMemory.toFixed(2)} GB / ${
+		// 					os.totalmem() / (1024 * 1024 * 1024).toFixed(2)
+		// 				} GB`
+		// 	)
+		// )
 	}, 1000)
 }
 
 function calculateCPU(oldCpus, newCpus) {
+	// ALgorithm
+
+	const cpuTimes = oldCpus.times
+    const values = Object.values(oldCpus.times)
+
 	const oldTotal = Object.values(oldCpus.times).reduce((a, b) => a + b)
+
+    const newCpuTimes = newCpus.times
+	const properties = Object.values(newCpus.times)
+
 	const newTotal = Object.values(newCpus.times).reduce((a, b) => a + b)
 
 	const idle = newCpus.times.idle - oldCpus.times.idle
 	const total = newTotal - oldTotal
 	const used = total - idle
 
-	return ((100 * used) / total).toFixed()
+	const result = ((100 * used) / total).toFixed()
+    
+
+	return result
 }
 
 setInterval(monitor, 1000)
