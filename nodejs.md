@@ -68,3 +68,13 @@ os module for computer cpu, memory, ram, threads
 # Node Inbuilt Modules
 
 ## fs
+
+### promises 
+
+- main thread is always free
+- second thread is working 
+- in async/await functions -  second thread behave as a synchronous
+- promise means will return something whether it's an error & success result
+- promise introduced rescue from callback hell
+
+promises syntax - etheir .then or async/await
