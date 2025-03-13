@@ -14,5 +14,7 @@ return "Good Evening"
 const greetings = getGreetings(hours)
 console.log(`${greetings}, ${user}! `)
 
+export default getGreetings
+
 // Export for CommonJS
-module.exports = getGreetings;
+// module.exports = getGreetings;

@@ -1,5 +1,6 @@
 // commonjs
+// ESM
 
-const getGreetings = require ("./app");
+import getGreetings from "./app.js";
 
 getGreetings("Runi")
