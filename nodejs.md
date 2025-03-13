@@ -46,3 +46,8 @@ in nodejs module means file
 
 os module for computer cpu, memory, ram, threads
 
+## Third Party Module - npm modules
+
+- user defined modules are registered in npm 
+- which genearlly refer to as package/library
+- we need proper package.json to use npm modules
