@@ -65,3 +65,6 @@ os module for computer cpu, memory, ram, threads
 - async functions & callbacks are registered in queue
 - few js inbuilt async modules/apis are - setTimeout(), setInterval()
 
+# Node Inbuilt Modules
+
+## fs
