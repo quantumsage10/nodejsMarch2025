@@ -51,3 +51,17 @@ os module for computer cpu, memory, ram, threads
 - user defined modules are registered in npm 
 - which genearlly refer to as package/library
 - we need proper package.json to use npm modules
+
+# Sync 
+
+- one line executes after another line completion
+- main thread blocking, nothing skips
+- by default synchronous execution
+
+# Async
+
+- parallel execution
+- main thread free , Non-Blocking, do not wait for execution
+- async functions & callbacks are registered in queue
+- few js inbuilt async modules/apis are - setTimeout(), setInterval()
+
