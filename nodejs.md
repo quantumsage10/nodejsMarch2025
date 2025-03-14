@@ -143,8 +143,19 @@ Handles Large Files → Can send large HTML files, videos, or logs without crash
 
 # Server Sent Events
 
-- streaming of chatgPT
+- streaming of chatgPT Response
 - stream data character by character in browser by chatGPT
+- Binary data also (audio, video) streaming
+
+do not wait for full response, as as soon as response starts , it starts streaming in browser
+
+## Event Emitter
+
+# Child Process
+
+# Cluster
+
+# Crypto 
 
 # Exceptional Scenarios
 
