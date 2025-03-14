@@ -1,3 +1,4 @@
+import fs from "node:fs";
 import { createServer } from "node:http";
 
 let count = 0;
@@ -5,18 +6,19 @@ let count = 0;
 // Server side events (SSE)
 const server = createServer((req, res) => {
   if (req.url === "/") {
-    res.writeHead(200, {
-      "Content-Type": "text/event-stream",
-      "Cache-Control": "no-cache",
-      "Connection": "keep-alive",
-      "Access-Control-Allow-Origin": "*" // CORS support
-    });
+     const htmlPage = fs.createReadStream("./stream.html");
+     htmlPage.pipe(res)
+  }  else if (req.url === "/stream") {
+     res.writeHead(200, {
+       "content-type": "text/event-stream",
+       "cache-control": "no-cache",
+       connection: "keep-alive"
+     });
 
-    // continous streaming on
-    setInterval(() => {
-     res.write(`data: The count is - ${count++} \n\n`);
-    }, 1000);
-  } 
+     setInterval(() => {
+       res.write(`data: The Count is - ${count++} \n\n`)
+     }, 1000)
+  }
 });
 
 server.listen(3001, () => {
