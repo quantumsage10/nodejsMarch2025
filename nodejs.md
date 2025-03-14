@@ -141,6 +141,11 @@ Faster Response → No need to wait for the full file to load.
 Memory Efficient → Doesn’t load everything into RAM at once.
 Handles Large Files → Can send large HTML files, videos, or logs without crashing the server.
 
+# Server Sent Events
+
+- 
+
+
 # Exceptional Scenarios
 
 for ultra-high-performance and mission-critical systems like healthcare, space exploration, and defense, raw callbacks or even lower-level programming with C++/Rust via Node.js bindings are often used
