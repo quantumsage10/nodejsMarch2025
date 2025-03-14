@@ -163,3 +163,8 @@ What Should Be Used?
 - Node Module Caching: When u import a module, Node.js caches it. If the module has changes, restarting the server is often required to see updates
 
 - File Watcher Delays: VS Code may not immediately detect file changes, so a refresh (or saving the file properly) helps.
+
+### Socket hung up
+
+- might be request data faulty
+- might be response data faulty

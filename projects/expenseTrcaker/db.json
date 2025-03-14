@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Netflix Subscription",
+    "amount": 499
+  },
+  {
+    "name": "Prime Subscription",
+    "amount": 599
+  },
+  {
+    "name": "Amazon Subscription",
+    "amount": 599
+  },
+  {
+    "name": "Food Subscription",
+    "amount": 599
+  },
+  {
+    "name": "Travel Subscription",
+    "amount": 699
+  }
+]
