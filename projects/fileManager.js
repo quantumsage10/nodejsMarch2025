@@ -70,7 +70,10 @@ async function menu() {
                break;
           case "7":
                rl.close();
-               return
+               return;
+
+          default: 
+               console.log(chalk.red("⚠️ Invalid Option"))     
      }
 
      await rl.question(chalk.gray('\nPress ENTER to continue...'))
