@@ -65,9 +65,6 @@ os module for computer cpu, memory, ram, threads
 - async functions & callbacks are registered in queue
 - few js inbuilt async modules/apis are - setTimeout(), setInterval()
 
-# Node Inbuilt Modules
-
-## fs
 
 ### promises (easily readable)  - structured 
 
@@ -98,6 +95,16 @@ promises syntax - etheir .then or async/await
 Callback Hell (difficult to maintain)
 Harder error handling
 
+
+# Node Inbuilt Modules
+
+## fs
+
+## Readline
+
+- taking input from terminal
+- taking input from cli
+
 # Exceptional Scenarios
 
 for ultra-high-performance and mission-critical systems like healthcare, space exploration, and defense, raw callbacks or even lower-level programming with C++/Rust via Node.js bindings are often used
@@ -107,3 +114,16 @@ What Should Be Used?
 ✅ Node.js (via C++/Rust bindings) – For fast API interfaces but not core logic.
 ✅ Raw Callbacks – When you need the fastest execution possible.
 ✅ WebAssembly (WASM) – When performance is critical in a browser or edge computing scenario.
+
+# Errors
+
+### Top-level Function Calls - Global Scope Function Call in a File
+
+- in Node.js, code in a separate file(fspromise.js) is considered top-level within that file(fileManager.js) and executes immediately when the module is imported.
+- means when you import a file, its top-level(function call in global scope) code becomes part of the main file's execution flow at that point.
+
+### Refreshing VS Code is necessary to avoid caching
+
+- Node Module Caching: When u import a module, Node.js caches it. If the module has changes, restarting the server is often required to see updates
+
+- File Watcher Delays: VS Code may not immediately detect file changes, so a refresh (or saving the file properly) helps.
