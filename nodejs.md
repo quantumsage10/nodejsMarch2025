@@ -143,8 +143,8 @@ Handles Large Files → Can send large HTML files, videos, or logs without crash
 
 # Server Sent Events
 
-- 
-
+- streaming of chatgPT
+- stream data character by character in browser by chatGPT
 
 # Exceptional Scenarios
 
