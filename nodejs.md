@@ -120,10 +120,17 @@ which fman
 
 ## fs
 
+- manage file system
+
 ## Readline
 
 - taking input from terminal
 - taking input from cli
+
+## HTTP
+
+- to create server
+- server means who listens our request continously without explicitely stopping or crashing
 
 # Exceptional Scenarios
 
