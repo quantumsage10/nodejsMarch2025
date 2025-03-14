@@ -3,10 +3,10 @@
 # History
 
 why nodejs ?
-nodejs solves single thread problem & delegate/offload it's IO operations (async) to OS & never be out of thread 
-apache has request per thread (not single thread) - can be out of thread
+- nodejs solves single thread problem & delegate/offload it's IO operations (async) to OS & never be out of thread 
+- apache has request per thread (not single thread) -  in future could be out of thread
 
-comparision of nodejs vs apache - nodejs is really fast
+✨ comparision of nodejs vs apache - nodejs is really fast
 
 # REPL read-eval-print-loop
 - just for experiment
@@ -118,6 +118,14 @@ which fman
 
 # Node Inbuilt Modules
 
+## process
+
+- global object, no need importation
+- get system & environment info (env, pid, cwd, argv)
+- handle exit events (exit, uncaughtException)
+- monitor resource usage (memoryUsage(), cpuUsage())
+- manage event loop execution (nextTick(), setImmediate())
+
 ## fs
 
 - manage file system
@@ -134,12 +142,12 @@ which fman
 
 # Stream
 
-- File reading chunk by chunk, efficient for memory RAM
+- File reading chunk by chunk, efficient for RAM memory 
 
-Why use streaming?
-Faster Response → No need to wait for the full file to load.
-Memory Efficient → Doesn’t load everything into RAM at once.
-Handles Large Files → Can send large HTML files, videos, or logs without crashing the server.
+🌟 Why use streaming?
+- Faster Response → No need to wait for the full file to load.
+- Memory Efficient → Doesn’t load everything into RAM at once.
+- Handles Large Files → Can send large HTML files, videos, or logs without crashing the server.
 
 # Server Sent Events
 
