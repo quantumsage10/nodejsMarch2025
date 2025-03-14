@@ -10,6 +10,9 @@
     "type": "git",
     "url": "https://github.com/quantumsage10/nodejsMarch2025.git"
   },
+ "bin": {
+  "fman": "./projects/fileManager.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

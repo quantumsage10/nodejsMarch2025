@@ -96,6 +96,26 @@ Callback Hell (difficult to maintain)
 Harder error handling
 
 
+# Shebang (#!) in Node.js Scripts Execution
+
+```js
+// It finds Node.js automatically, even if it’s installed in different locations
+#!/usr/bin/env node
+```
+
+```json
+// package.json
+"bin": {
+"fman": "./fileManager,js" 
+},
+```
+
+```sh
+# connect to fman 
+npm link 
+which fman
+```
+
 # Node Inbuilt Modules
 
 ## fs
